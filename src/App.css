@@ -20,3 +20,30 @@
   margin: 0;
   font-size: 15px;
 }
+
+.ringkasan {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.ringkasan-item {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #d9e3da;
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+.ringkasan-label {
+  display: block;
+  font-size: 14px;
+  color: #5b6b60;
+  margin-bottom: 4px;
+}
+
+.ringkasan-angka {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2f7c47;
+}
