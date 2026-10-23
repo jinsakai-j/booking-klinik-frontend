@@ -47,3 +47,54 @@
   font-weight: bold;
   color: #2f7c47;
 }
+
+.kartu-janji {
+  background-color: #ffffff;
+  border: 1px solid #d9e3da;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.kartu-atas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.kartu-atas h3 {
+  margin: 0;
+  font-size: 17px;
+  color: #1f2933;
+}
+
+.status {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.status-konfirmasi {
+  background-color: #d9f0e0;
+  color: #2f7c47;
+}
+
+.status-menunggu {
+  background-color: #fdf0cf;
+  color: #8a6100;
+}
+
+.kartu-dokter,
+.kartu-jadwal,
+.kartu-keluhan,
+.kartu-hp {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #45524a;
+}
+
+.kartu-keluhan {
+  font-style: italic;
+}
