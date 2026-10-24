@@ -9,7 +9,7 @@ const formAwal = {
   keluhan: '',
 }
 
-function FormJanjiTemu({ daftarDokter }) {
+function FormJanjiTemu({ daftarDokter, onTambah }) {
   const [form, setForm] = useState(formAwal)
 
   function handleChange(event) {
@@ -17,8 +17,14 @@ function FormJanjiTemu({ daftarDokter }) {
     setForm({ ...form, [name]: value })
   }
 
+  function handleSubmit(event) {
+    event.preventDefault()
+    onTambah(form)
+    setForm(formAwal)
+  }
+
   return (
-    <section className="form-janji">
+    <form className="form-janji" onSubmit={handleSubmit}>
       <h2>Buat Janji Temu</h2>
       <div className="form-baris">
         <label htmlFor="namaPasien">Nama Pasien</label>
@@ -29,6 +35,7 @@ function FormJanjiTemu({ daftarDokter }) {
           placeholder="Nama lengkap pasien"
           value={form.namaPasien}
           onChange={handleChange}
+          required
         />
       </div>
       <div className="form-baris">
@@ -40,6 +47,7 @@ function FormJanjiTemu({ daftarDokter }) {
           placeholder="08xxxxxxxxxx"
           value={form.noHp}
           onChange={handleChange}
+          required
         />
       </div>
       <div className="form-baris">
@@ -49,6 +57,7 @@ function FormJanjiTemu({ daftarDokter }) {
           name="dokter"
           value={form.dokter}
           onChange={handleChange}
+          required
         >
           <option value="">Pilih dokter</option>
           {daftarDokter.map((dokter) => (
@@ -67,6 +76,7 @@ function FormJanjiTemu({ daftarDokter }) {
             type="date"
             value={form.tanggal}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="form-baris">
@@ -77,6 +87,7 @@ function FormJanjiTemu({ daftarDokter }) {
             type="time"
             value={form.jam}
             onChange={handleChange}
+            required
           />
         </div>
       </div>
@@ -89,12 +100,13 @@ function FormJanjiTemu({ daftarDokter }) {
           placeholder="Keluhan pasien"
           value={form.keluhan}
           onChange={handleChange}
+          required
         />
       </div>
-      <button type="button" className="tombol-tambah">
+      <button type="submit" className="tombol-tambah">
         Tambah
       </button>
-    </section>
+    </form>
   )
 }
 

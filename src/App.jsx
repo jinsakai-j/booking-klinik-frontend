@@ -8,7 +8,16 @@ import { daftarDokter } from './data/dokter'
 import './App.css'
 
 function App() {
-  const [daftarJanji] = useState(daftarJanjiTemu)
+  const [daftarJanji, setDaftarJanji] = useState(daftarJanjiTemu)
+
+  function tambahJanji(janjiBaru) {
+    const idBaru = 'J' + String(daftarJanji.length + 1).padStart(3, '0')
+
+    setDaftarJanji([
+      ...daftarJanji,
+      { id: idBaru, ...janjiBaru, status: 'Menunggu' },
+    ])
+  }
 
   return (
     <div className="app">
@@ -17,7 +26,7 @@ function App() {
         subjudul="Buat dan pantau janji temu pasien"
       />
       <RingkasanJanji daftar={daftarJanji} />
-      <FormJanjiTemu daftarDokter={daftarDokter} />
+      <FormJanjiTemu daftarDokter={daftarDokter} onTambah={tambahJanji} />
       <DaftarJanji daftar={daftarJanji} />
     </div>
   )
