@@ -105,6 +105,17 @@
   color: #2f7c47;
 }
 
+.data-kosong {
+  background-color: #ffffff;
+  border: 1px dashed #c6d3c9;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  color: #7a8a7f;
+}
+
 .form-janji {
   background-color: #ffffff;
   border: 1px solid #d9e3da;
