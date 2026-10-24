@@ -17,3 +17,10 @@ aplikasi saja. Component dan fitur lainnya ditambahkan di update
 berikutnya.
 
 Rajaa Azharul Hanafi - 103022400116
+
+
+## Update week6
+
+Sudah dibuat versi React menggunakan Vite. Aplikasi ini punya 5 komponen: Header, RingkasanJanji, FormJanjiTemu, DaftarJanji, dan KartuJanjiTemu. Daftar janji disimpan sebagai state di App.jsx dan ditampilkan dengan .map() menggunakan key unik. Form tambah janji dibuat sebagai controlled component, tombol Tambah menambahkan data baru dengan status awal Menunggu. Jika daftar masih kosong akan muncul teks "Belum ada data Janji Temu". Tampilan sudah diatur sedikit biar lebih rapi dan menyesuaikan layar kecil.
+
+Link repository: https://github.com/jinsakai-j/booking-klinik-frontend
