@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import RingkasanJanji from './components/RingkasanJanji'
+import FormJanjiTemu from './components/FormJanjiTemu'
 import DaftarJanji from './components/DaftarJanji'
 import { daftarJanjiTemu } from './data/janjiTemu'
+import { daftarDokter } from './data/dokter'
 import './App.css'
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
         subjudul="Buat dan pantau janji temu pasien"
       />
       <RingkasanJanji daftar={daftarJanji} />
+      <FormJanjiTemu daftarDokter={daftarDokter} />
       <DaftarJanji daftar={daftarJanji} />
     </div>
   )
