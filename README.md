@@ -24,3 +24,10 @@ Rajaa Azharul Hanafi - 103022400116
 Sudah dibuat versi React menggunakan Vite. Aplikasi ini punya 5 komponen: Header, RingkasanJanji, FormJanjiTemu, DaftarJanji, dan KartuJanjiTemu. Daftar janji disimpan sebagai state di App.jsx dan ditampilkan dengan .map() menggunakan key unik. Form tambah janji dibuat sebagai controlled component, tombol Tambah menambahkan data baru dengan status awal Menunggu. Jika daftar masih kosong akan muncul teks "Belum ada data Janji Temu". Tampilan sudah diatur sedikit biar lebih rapi dan menyesuaikan layar kecil.
 
 Link repository: https://github.com/jinsakai-j/booking-klinik-frontend
+
+
+## Update week7
+
+Ditambahkan fitur konsumsi API untuk menampilkan "Tips Kesehatan". Endpoint yang dipakai: https://dummyjson.com/quotes?limit=5 (diambil pakai fetch()). Dipilih karena datanya sederhana, gratis, mendukung CORS, relevan buat tampilan tambahan di aplikasi klinik.
+
+Implementasi: komponen src/components/TipsKesehatan.jsx pakai useEffect untuk fetch saat komponen dimount, useState untuk data, loading, dan error. Saat loading ditampilkan "Memuat tips kesehatan...". Saat error muncul pesan error dan tombol "Coba Lagi" (interaksi untuk mengulang pengambilan data). Saat berhasil, data ditampilkan pakai .map() dengan key unik ke dalam kartu. Section ini ditambahkan di App.jsx di bawah DaftarJanjiTemu.
